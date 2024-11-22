@@ -1,7 +1,7 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerate-Effect";
-import MagicButton from "./ui/MagicButton";
+import MagicButton from "./MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
