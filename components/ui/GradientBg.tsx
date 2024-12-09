@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
-
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(108, 0, 162)",
   gradientBackgroundEnd = "rgb(0, 17, 82)",
@@ -72,7 +71,6 @@ export const BackgroundGradientAnimation = ({
 
     move();
   }, [tgX, tgY]);
-
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {
       const rect = interactiveRef.current.getBoundingClientRect();
@@ -80,12 +78,10 @@ export const BackgroundGradientAnimation = ({
       setTgY(event.clientY - rect.top);
     }
   };
-
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
-
   return (
     <div
       className={cn(
@@ -163,7 +159,6 @@ export const BackgroundGradientAnimation = ({
             `opacity-100`
           )}
         ></div>
-
         {interactive && (
           <div
             ref={interactiveRef}
